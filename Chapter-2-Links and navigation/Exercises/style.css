@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #eee;
+}
+
+nav {
+  background-color: #222;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #f94;
+  color: #111;
+  border-radius: 5px;
+}
+
+section {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #f94;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.btn-link {
+  background-color: #f94;
+  color: #111;
+  border-radius: 4px;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-link:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+/* Review Card */
+.review-card {
+  background-color: #222;
+  border: 2px solid #f94;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 0 15px #f94;
+  animation: pulseGlow 2s infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.03);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #f94;
+  }
+  100% {
+    box-shadow: 0 0 20px #f94, 0 0 10px #f94 inset;
+  }
+}
+

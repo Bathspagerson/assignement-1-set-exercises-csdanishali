@@ -1,0 +1,128 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fff8f0, #fce3cd);
+  color: #333;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  animation: slideUp 1s ease-in-out;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+h1.glow {
+  text-align: center;
+  font-size: 3em;
+  color: #d35400;
+  animation: glow 2s ease-in-out infinite alternate;
+  margin: 20px 0;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+  }
+  to {
+    text-shadow: 0 0 20px #e67e22, 0 0 40px #e67e22;
+  }
+}
+
+.recipe-image {
+  width: 80%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.recipe-image:hover {
+  transform: scale(1.03);
+}
+
+.description {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #a84300;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease-in;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin: 20px 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.footer-glow {
+  height: 5px;
+  background: linear-gradient(to right, #e67e22, #f1c40f, #e67e22);
+  box-shadow: 0 0 20px #e67e22;
+  animation: pulse 2s infinite ease-in-out;
+  margin-top: 50px;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 20px #e67e22;
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 30px #f39c12;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
